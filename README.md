@@ -3,6 +3,7 @@ Java Quest
 Java Quest is an engaging and educational quiz game developed in Java. It challenges players with questions from various categories like history, science, pop culture, and mathematics. Designed for fun and learning, players can track their progress, accumulate points, and compare scores with others.
 
 🧩 Features
+
 User-Friendly Interface
 Enjoy an interactive GUI with buttons, images, and vibrant colors for an immersive experience.
 
@@ -22,6 +23,7 @@ Assistance Options
 Features like hints or the ability to skip a question (limited uses per game).
 
 🛠️ Main Components
+
 Classes Overview
 Jogo: The main class that manages game flow, including question control, scoring, and round progression.
 Pergunta: Represents individual questions with attributes like statement, answer options, correct answer, and difficulty level.
@@ -30,10 +32,12 @@ BancoDePerguntas: Handles the storage and retrieval of questions, filtering them
 InterfaceGrafica: Manages the graphical elements like buttons, panels, and the display of questions and answers.
 Controlador: Acts as an intermediary between the graphical interface and the game logic.
 Ranking: Organizes and displays the leaderboard.
+
 Dependencies
 This project uses Java Swing for the graphical interface and standard Java libraries for logic implementation.
 
 🎮 How to Play
+
 Register or Log In to track your progress.
 Choose a Category and select a difficulty level.
 Answer the questions presented.
