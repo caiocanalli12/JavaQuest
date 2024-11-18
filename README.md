@@ -1,7 +1,5 @@
 Java Quest
 
-Java Quest is an engaging and educational quiz game developed in Java. It challenges players with questions from various categories like history, science, pop culture, and mathematics. Designed for fun and learning, players can track their progress, accumulate points, and compare scores with others.
-
 🧩 Features
 
 User-Friendly Interface
