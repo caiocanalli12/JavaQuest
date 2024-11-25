@@ -1,4 +1,4 @@
-package br.edu.ifsp;
+package br.edu.ifsp.app;
 
 import java.io.IOException;
 import java.net.URL;
@@ -28,9 +28,11 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        String caminho = "/br/edu/ifsp/fxml/" + fxml + ".fxml";
-        URL arquivo = App.class.getResource(caminho);
-        FXMLLoader fxmlLoader = new FXMLLoader(arquivo);
+        String path = "/br/edu/ifsp/fxml/"+ fxml + ".fxml";
+        System.out.println(path);
+        URL archive = App.class.getResource(path);
+        System.out.println(archive);
+        FXMLLoader fxmlLoader = new FXMLLoader(archive);
         return fxmlLoader.load();
     }
 
