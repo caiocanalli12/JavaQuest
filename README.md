@@ -36,9 +36,8 @@ This project uses Java Swing for the graphical interface and standard Java libra
 
 🎮 How to Play
 
-Register or Log In to track your progress.
-Choose a Category and select a difficulty level.
+Put your nickname.
+Select a difficulty level.
 Answer the questions presented.
-Use hints or skip questions if needed.
 Accumulate Points for correct answers.
 At the end of the game, view your score and compare it on the leaderboard.
