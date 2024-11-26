@@ -5,10 +5,9 @@ import java.io.IOException;
 import br.edu.ifsp.app.App;
 import javafx.fxml.FXML;
 
-public class SecondaryController {
-
+public class TertiaryController {
     @FXML
-    private void switchToTertiary() throws IOException {
-        App.setRoot("tertiary");
+    private void switchToPrimary() throws IOException {
+        App.setRoot("primary");
     }
 }
