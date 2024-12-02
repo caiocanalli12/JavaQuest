@@ -28,7 +28,7 @@
             <Insets right="10.0" />
          </VBox.margin>
       </Pane>
-        <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Próxima Pergunta" />
+        <Button fx:id="secondaryButton" onAction="#switchToRanking" text="Próxima Pergunta" />
     </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -6,8 +6,8 @@ import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.Scene;                                       
+import javafx.stage.Stage;                                       
 
 /**
  * JavaFX App
@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("menu"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
