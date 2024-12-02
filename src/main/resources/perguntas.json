@@ -1,5 +1,5 @@
 {
-    "facil": [
+    "f": [
         {
             "pergunta": "Qual e a capital do Brasil?",
             "alternativas": [
@@ -201,7 +201,7 @@
             "correta": "Terra"
         }
     ],
-        "media": [
+        "m": [
             {
                 "pergunta": "Quem escreveu 'Dom Casmurro'?",
                 "alternativas": [
@@ -404,7 +404,7 @@
             }
         ],
     
-    "dificil": [
+    "d": [
         {
             "pergunta": "Quem foi o primeiro presidente do Brasil?",
             "alternativas": [
