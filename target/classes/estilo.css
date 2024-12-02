@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Heroes Legend";
+    src: url("fonts/Heroes Legend.ttf");
+}
+
+.meu-label {
+    -fx-font-family: "MinhaFonte";
+}
