@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="492.0" prefWidth="739.0" spacing="20.0" stylesheets="@../../../../estilo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.PrimaryController">
+<VBox alignment="CENTER" prefHeight="492.0" prefWidth="739.0" spacing="20.0" stylesheets="@../../../../estilo.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.LogInController">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log - In">
          <font>
@@ -21,7 +21,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="nicknameField" onAction="#switchToSecondary" />
+      <TextField fx:id="nicknameField" onAction="#switchToQuestion" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
