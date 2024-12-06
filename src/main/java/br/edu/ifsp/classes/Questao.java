@@ -1,23 +1,33 @@
 package br.edu.ifsp.classes;
 
+import java.util.List;
+
 public class Questao {
-    private char dificuldade;
     private String pergunta;
-    private String alternativa1;
-    private String alternativa2;
-    private String alternativa3;
-    private String alternativa4;
+    private List<String> alternativas;
     private String correta;
 
-    public Questao(char dificuldade, String pergunta, String alternativa1, String alternativa2, String alternativa3, String alternativa4, String correta) {
-        this.dificuldade = dificuldade;
+    public String getPergunta() {
+        return pergunta;
+    }
+
+    public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
-        this.alternativa1 = alternativa1;
-        this.alternativa2 = alternativa2;
-        this.alternativa3 = alternativa3;
-        this.alternativa4 = alternativa4;
+    }
+
+    public List<String> getAlternativas() {
+        return alternativas;
+    }
+
+    public void setAlternativas(List<String> alternativas) {
+        this.alternativas = alternativas;
+    }
+
+    public String getCorreta() {
+        return correta;
+    }
+
+    public void setCorreta(String correta) {
         this.correta = correta;
     }
-    
-    
 }
