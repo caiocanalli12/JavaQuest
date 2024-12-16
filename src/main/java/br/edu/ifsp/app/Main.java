@@ -35,4 +35,9 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(archive);
         return fxmlLoader.load();
     }    
+
+    public static void main(String[] args) {
+        launch();
+    }
+    
 }
