@@ -16,7 +16,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button fx:id="botaoJogar" mnemonicParsing="false" onAction="#switchToLogIn" prefHeight="63.0" prefWidth="146.0" text="JOGAR">
+      <Button fx:id="botaoJogar" mnemonicParsing="false" onAction="#switchToQuestion" prefHeight="63.0" prefWidth="146.0" text="JOGAR">
          <VBox.margin>
             <Insets bottom="25.0" />
          </VBox.margin>

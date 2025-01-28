@@ -85,60 +85,66 @@ public class QuestionController implements Initializable{
     }
     
     @Override
-    public void initialize(java.net.URL location, java.util.ResourceBundle resources) {
-    
-        String filePath = "src/main/resources/perguntas.json";
-    
-        try {
-            Map<String, List<Questao>> questionsMap = JsonReader.readQuestions(filePath);
-            Object[] categories = questionsMap.keySet().toArray();
-            String randomCategory = (String) categories[new Random().nextInt(categories.length)];
-    
-            List<Questao> questions = questionsMap.get(randomCategory);
-            Questao randomQuestion = questions.get(new Random().nextInt(questions.size()));
-    
-            // Configura a pergunta e alternativas
-            pergunta.setText(randomQuestion.getPergunta());
-            botaoR1.setText(randomQuestion.getAlternativas().get(0));
-            botaoR2.setText(randomQuestion.getAlternativas().get(1));
-            botaoR3.setText(randomQuestion.getAlternativas().get(2));
-            botaoR4.setText(randomQuestion.getAlternativas().get(3));
-    
-            // Adiciona eventos de clique nos botões
-            botaoR1.setOnAction(event -> verificarResposta(botaoR1, randomQuestion));
-            botaoR2.setOnAction(event -> verificarResposta(botaoR2, randomQuestion));
-            botaoR3.setOnAction(event -> verificarResposta(botaoR3, randomQuestion));
-            botaoR4.setOnAction(event -> verificarResposta(botaoR4, randomQuestion));
-    
-        } catch (IOException e) {
-            System.err.println("Erro ao ler o arquivo JSON: " + e.getMessage());
+public void initialize(java.net.URL location, java.util.ResourceBundle resources) {
+
+    String filePath = "src/main/resources/perguntas.json";
+
+    try {
+        Map<String, List<Questao>> questionsMap = JsonReader.readQuestions(filePath);
+        Object[] categories = questionsMap.keySet().toArray();
+        String randomCategory = (String) categories[new Random().nextInt(categories.length)];
+
+        List<Questao> questions = questionsMap.get(randomCategory);
+        Questao randomQuestion = questions.get(new Random().nextInt(questions.size()));
+
+        // Configura a pergunta e alternativas
+        pergunta.setText(randomQuestion.getPergunta());
+        botaoR1.setText(randomQuestion.getAlternativas().get(0));
+        botaoR2.setText(randomQuestion.getAlternativas().get(1));
+        botaoR3.setText(randomQuestion.getAlternativas().get(2));
+        botaoR4.setText(randomQuestion.getAlternativas().get(3));
+
+        // Desativa o botão "Próxima Pergunta" até que uma resposta seja selecionada
+        proximaPergunta.setDisable(true);
+
+        // Adiciona eventos de clique nos botões
+        botaoR1.setOnAction(event -> verificarResposta(botaoR1, randomQuestion));
+        botaoR2.setOnAction(event -> verificarResposta(botaoR2, randomQuestion));
+        botaoR3.setOnAction(event -> verificarResposta(botaoR3, randomQuestion));
+        botaoR4.setOnAction(event -> verificarResposta(botaoR4, randomQuestion));
+
+    } catch (IOException e) {
+        System.err.println("Erro ao ler o arquivo JSON: " + e.getMessage());
+    }
+}
+
+// Método para verificar a resposta ao clicar em um botão
+private void verificarResposta(Button botaoSelecionado, Questao questao) {
+    // Reseta as cores dos botões
+    botaoR1.setTextFill(javafx.scene.paint.Color.BLACK);
+    botaoR2.setTextFill(javafx.scene.paint.Color.BLACK);
+    botaoR3.setTextFill(javafx.scene.paint.Color.BLACK);
+    botaoR4.setTextFill(javafx.scene.paint.Color.BLACK);
+
+    // Verifica se a resposta está correta e ajusta as cores
+    if (botaoSelecionado.getText().equals(questao.getCorreta())) {
+        botaoSelecionado.setTextFill(javafx.scene.paint.Color.GREEN);
+    } else {
+        botaoSelecionado.setTextFill(javafx.scene.paint.Color.RED);
+
+        // Destaca a alternativa correta
+        if (botaoR1.getText().equals(questao.getCorreta())) {
+            botaoR1.setTextFill(javafx.scene.paint.Color.GREEN);
+        } else if (botaoR2.getText().equals(questao.getCorreta())) {
+            botaoR2.setTextFill(javafx.scene.paint.Color.GREEN);
+        } else if (botaoR3.getText().equals(questao.getCorreta())) {
+            botaoR3.setTextFill(javafx.scene.paint.Color.GREEN);
+        } else if (botaoR4.getText().equals(questao.getCorreta())) {
+            botaoR4.setTextFill(javafx.scene.paint.Color.GREEN);
         }
     }
-    
-    // Método para verificar a resposta ao clicar em um botão
-    private void verificarResposta(Button botaoSelecionado, Questao questao) {
-        // Reseta as cores dos botões
-        botaoR1.setTextFill(javafx.scene.paint.Color.BLACK);
-        botaoR2.setTextFill(javafx.scene.paint.Color.BLACK);
-        botaoR3.setTextFill(javafx.scene.paint.Color.BLACK);
-        botaoR4.setTextFill(javafx.scene.paint.Color.BLACK);
-    
-        // Verifica se a resposta está correta e ajusta as cores
-        if (botaoSelecionado.getText().equals(questao.getCorreta())) {
-            botaoSelecionado.setTextFill(javafx.scene.paint.Color.GREEN);
-        } else {
-            botaoSelecionado.setTextFill(javafx.scene.paint.Color.RED);
-    
-            // Destaca a alternativa correta
-            if (botaoR1.getText().equals(questao.getCorreta())) {
-                botaoR1.setTextFill(javafx.scene.paint.Color.GREEN);
-            } else if (botaoR2.getText().equals(questao.getCorreta())) {
-                botaoR2.setTextFill(javafx.scene.paint.Color.GREEN);
-            } else if (botaoR3.getText().equals(questao.getCorreta())) {
-                botaoR3.setTextFill(javafx.scene.paint.Color.GREEN);
-            } else if (botaoR4.getText().equals(questao.getCorreta())) {
-                botaoR4.setTextFill(javafx.scene.paint.Color.GREEN);
-            }
-        }
-    }
-}    
+
+    // Habilita o botão "Próxima Pergunta" após uma resposta ser selecionada
+    proximaPergunta.setDisable(false);
+}
+}

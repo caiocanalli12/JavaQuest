@@ -8,13 +8,8 @@ import javafx.fxml.FXML;
 public class MenuController {
 
     @FXML
-    private void switchToLogIn() throws IOException {
-        Main.setRoot("login");
-    }
-    
-    @FXML
-    private void switchToRanking() throws IOException {
-        Main.setRoot("ranking");
+    private void switchToQuestion() throws IOException {
+        Main.setRoot("question");
     }
 
 }
