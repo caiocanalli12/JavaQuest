@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.RankingController">
    <children>
@@ -15,12 +14,6 @@
          </image>
       </ImageView>
       <Button layoutX="463.0" layoutY="413.0" mnemonicParsing="false" onAction="#switchToMenu" text="Menu Principal" />
-      <TableView layoutX="336.0" layoutY="134.0" prefHeight="243.0" prefWidth="350.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Posição" />
-          <TableColumn prefWidth="199.99990844726562" text="Nome" />
-            <TableColumn prefWidth="75.0" text="Pontuação" />
-        </columns>
-      </TableView>
+      <TextFlow prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

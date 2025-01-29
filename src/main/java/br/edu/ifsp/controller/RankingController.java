@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import br.edu.ifsp.app.Main;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class RankingController {
     @FXML
@@ -11,4 +12,10 @@ public class RankingController {
         Main.setRoot("menu");
     }
     
+    @FXML
+    private Label pontuacaoLabel;
+
+    public void setPontuacao(int pontuacao) {
+        pontuacaoLabel.setText("Pontuação: " + pontuacao);
+    }
 }

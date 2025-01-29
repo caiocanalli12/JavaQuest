@@ -6,6 +6,7 @@ public class Questao {
     private String pergunta;
     private List<String> alternativas;
     private String correta;
+    private String dificuldade; // NOVO ATRIBUTO
 
     public String getPergunta() {
         return pergunta;
@@ -29,5 +30,13 @@ public class Questao {
 
     public void setCorreta(String correta) {
         this.correta = correta;
+    }
+
+    public String getDificuldade() { // NOVO GETTER
+        return dificuldade;
+    }
+
+    public void setDificuldade(String dificuldade) { // NOVO SETTER
+        this.dificuldade = dificuldade;
     }
 }
