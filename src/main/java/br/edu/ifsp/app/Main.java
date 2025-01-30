@@ -9,9 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * JavaFX App
- */
 public class Main extends Application {
 
     private static Scene scene;
@@ -27,7 +24,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/br/edu/ifsp/fxml/" + fxml + ".fxml"));
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
-        return fxmlLoader.getController(); // Retorna o controlador correto
+        return fxmlLoader.getController();
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

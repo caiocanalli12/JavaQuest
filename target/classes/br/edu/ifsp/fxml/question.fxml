@@ -9,26 +9,26 @@
 
 <VBox alignment="CENTER" fillWidth="false" prefHeight="492.0" prefWidth="739.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.QuestionController">
     <children>
-      <Label fx:id="pergunta" text="Pergunta.........">
+      <Label fx:id="pergunta" prefHeight="63.0" prefWidth="573.0" text="Pergunta........." textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Pane>
          <children>
-            <Button fx:id="botaoR2" layoutX="461.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="81.0" prefWidth="152.0" text="resposta 2">
+            <Button fx:id="botaoR2" layoutX="369.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="94.0" prefWidth="244.0" text="resposta 2">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="botaoR3" layoutX="-1.0" layoutY="156.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="81.0" prefWidth="152.0" text="resposta 3">
+            <Button fx:id="botaoR3" layoutX="-1.0" layoutY="143.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="94.0" prefWidth="244.0" text="resposta 3">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="botaoR4" layoutX="461.0" layoutY="156.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="81.0" prefWidth="152.0" text="resposta 4">
+            <Button fx:id="botaoR4" layoutX="369.0" layoutY="143.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="94.0" prefWidth="244.0" text="resposta 4">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="botaoR1" layoutX="-1.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="81.0" prefWidth="152.0" text="resposta 1">
+            <Button fx:id="botaoR1" layoutX="-1.0" mnemonicParsing="false" onAction="#checarResposta" prefHeight="94.0" prefWidth="244.0" text="resposta 1">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
