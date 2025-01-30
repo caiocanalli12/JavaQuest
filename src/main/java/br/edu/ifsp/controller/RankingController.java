@@ -15,7 +15,14 @@ public class RankingController {
     @FXML
     private Label pontuacaoLabel;
 
+    private int pontuacao;
+
     public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
+        atualizarPontuacao();
+    }
+
+    private void atualizarPontuacao() {
         pontuacaoLabel.setText("Pontuação: " + pontuacao);
     }
 }

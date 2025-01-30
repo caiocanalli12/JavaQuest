@@ -7,7 +7,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;                                       
+import javafx.stage.Stage;
 
 /**
  * JavaFX App
@@ -23,21 +23,19 @@ public class Main extends Application {
         stage.show();
     }
 
-    public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    public static <T> T setRoot(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/br/edu/ifsp/fxml/" + fxml + ".fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
+        return fxmlLoader.getController(); // Retorna o controlador correto
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        String path = "/br/edu/ifsp/fxml/"+ fxml + ".fxml";
-        System.out.println(path);
-        URL archive = Main.class.getResource(path);
-        System.out.println(archive);
-        FXMLLoader fxmlLoader = new FXMLLoader(archive);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/br/edu/ifsp/fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
-    }    
+    }
 
     public static void main(String[] args) {
         launch();
     }
-    
 }

@@ -39,8 +39,13 @@ public class QuestionController implements Initializable {
     public int pontuacao = 0;
 
     @FXML
-    private void switchToRanking() throws IOException {
-        Main.setRoot("ranking");
+    private void switchToRanking() {
+        try {
+            RankingController rankingController = Main.setRoot("ranking");
+            rankingController.setPontuacao(pontuacao);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -48,13 +53,10 @@ public class QuestionController implements Initializable {
         perguntaAtualIndex++;
         if (perguntaAtualIndex < perguntasSelecionadas.size()) {
             carregarPergunta(perguntasSelecionadas.get(perguntaAtualIndex));
+            habilitarBotoesResposta(); // Reabilita os botões de resposta para a próxima pergunta
         } else {
             System.out.println("Fim do jogo! Pontuação total: " + pontuacao);
-            try {
-                switchToRanking();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            switchToRanking();
         }
         proximaPergunta.setDisable(true);
     }
@@ -105,6 +107,7 @@ public class QuestionController implements Initializable {
     private void checarResposta(javafx.event.ActionEvent event) {
         Button botaoSelecionado = (Button) event.getSource();
         verificarResposta(botaoSelecionado, perguntasSelecionadas.get(perguntaAtualIndex));
+        desabilitarBotoesResposta(); // Desabilita os botões de resposta após a seleção
     }
 
     private void verificarResposta(Button botaoSelecionado, Questao questao) {
@@ -139,5 +142,19 @@ public class QuestionController implements Initializable {
         }
         
         proximaPergunta.setDisable(false);
+    }
+
+    private void desabilitarBotoesResposta() {
+        botaoR1.setDisable(true);
+        botaoR2.setDisable(true);
+        botaoR3.setDisable(true);
+        botaoR4.setDisable(true);
+    }
+
+    private void habilitarBotoesResposta() {
+        botaoR1.setDisable(false);
+        botaoR2.setDisable(false);
+        botaoR3.setDisable(false);
+        botaoR4.setDisable(false);
     }
 }
