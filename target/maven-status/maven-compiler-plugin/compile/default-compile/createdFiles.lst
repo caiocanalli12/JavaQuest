@@ -1,9 +1,7 @@
 br\edu\ifsp\controller\QuestionController.class
 br\edu\ifsp\classes\JsonReader$1.class
 br\edu\ifsp\controller\MenuController.class
-br\edu\ifsp\classes\Jogador.class
 br\edu\ifsp\classes\Questao.class
-br\edu\ifsp\classes\Ranking.class
 br\edu\ifsp\controller\RankingController.class
 module-info.class
 br\edu\ifsp\app\Main.class

@@ -9,9 +9,9 @@
 
 <VBox alignment="CENTER" fillWidth="false" prefHeight="492.0" prefWidth="739.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.QuestionController">
     <children>
-      <Label fx:id="pergunta" prefHeight="63.0" prefWidth="573.0" text="Pergunta........." textAlignment="CENTER">
+      <Label fx:id="pergunta" prefHeight="89.0" prefWidth="690.0" text="Pergunta........." textAlignment="CENTER">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Label>
       <Pane>

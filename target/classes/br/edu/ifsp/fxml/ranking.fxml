@@ -8,7 +8,7 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="60.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsp.controller.RankingController">
    <children>
-      <Label fx:id="pontuacaoLabel" prefHeight="89.0" prefWidth="193.0" text="Pontuação: 0" textAlignment="CENTER">
+      <Label fx:id="pontuacaoLabel" prefHeight="89.0" prefWidth="230.0" text="Pontuação: 0" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
          </font>
@@ -16,6 +16,9 @@
             <Insets />
          </VBox.margin>
       </Label>  
-      <Button layoutX="463.0" layoutY="413.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="81.0" prefWidth="142.0" text="Menu Principal" />
+      <Button layoutX="463.0" layoutY="413.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="81.0" prefWidth="142.0" text="Menu Principal">
+         <font>
+            <Font name="Bernard MT Condensed" size="16.0" />
+         </font></Button>
    </children>
 </VBox>
